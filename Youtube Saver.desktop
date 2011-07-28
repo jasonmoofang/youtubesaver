@@ -1,0 +1,12 @@
+[Desktop Entry]
+X-SuSE-translate=true
+Categories=Network;
+Encoding=UTF-8
+Name=Youtube Saver
+GenericName=YoutubeSaver
+Comment=Web Flash Video Previewer and Saver
+Exec=/home/lim/bin/YoutubeSaver
+Icon=/home/lim/Pictures/icons/youtube_saver.png
+Terminal=false
+Type=Application
+
