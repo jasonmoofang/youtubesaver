@@ -136,9 +136,9 @@ void MainWindow::appendFLV(const KUrl& url) {
 
 void MainWindow::appendMp3(const KUrl& url) {
     if (!url.path().endsWith(".mp3")) {
-        mp3Url->setText(url.path().replace(" ","") + ".mp3");
+        mp3Url->setText(url.path().trimmed() + ".mp3");
     } else {
-        mp3Url->setText(url.path().replace(" ",""));
+        mp3Url->setText(url.path().trimmed());
     }
 }
 
