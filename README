@@ -1,4 +1,4 @@
-A nice and simple GUI that lets you preview loaded/cached flash videos, and
+A small Qt program that lets you preview loaded/cached flash videos, and
 export/save them as flv/mp3 files on linux (and possibly other unixy) systems.
 
 Basically for most online flash videos, when you load it on your browser, the
