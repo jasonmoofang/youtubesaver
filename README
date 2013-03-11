@@ -1,0 +1,32 @@
+A nice and simple GUI that lets you preview loaded/cached flash videos, and
+export/save them as flv/mp3 files on linux (and possibly other unixy) systems.
+
+Basically for most online flash videos, when you load it on your browser, the
+video gets cached somewhere in your system (nowadays, in a deleted, but still-
+open file. True story). YoutubeSaver finds and lists the cached videos in a nice
+interface and lets you do shit with them.
+
+I hacked this up for my mother some time ago, and, as lazy people often do,
+never got round to writing a proper installation script, so you'll have
+to go about it manually.
+
+You can use the normal cmake build process:
+
+> mkdir build
+> cd build
+> cmake ..
+> make
+
+to create the YoutubeSaver executable, which you can then copy to a convenient
+location in your PATH. (A template desktop file with icon is also included if
+you want to "install" it in a more appealing way)
+
+For YoutubeSaver to work, you need to make the scripts 'flv-to-mp3' and
+'showflashcache' executable and put them in your PATH.
+
+You'll also need
+ - ffmpeg
+ - lame
+ - smplayer
+ 
+installed for everything to work properly.

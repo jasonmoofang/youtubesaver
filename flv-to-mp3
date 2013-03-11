@@ -1,0 +1,13 @@
+#!/bin/bash
+EXPECTED_ARGS=5
+E_BADARGS=65
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: flv-to-mp3 <Flash filename> <Output filename> <Title> <Artist> <Album>"
+  exit $E_BADARGS
+fi
+
+ffmpeg -i "$1" "$2.wav"
+lame --tt "$3" --ta "$4" --tl "$5" -h "$2.wav" "$2.mp3"
+rm "$2.wav"

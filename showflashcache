@@ -1,0 +1,10 @@
+#!/bin/bash
+# Show all flash cache files in /proc/
+IFS=$'\n';
+for pid in `pgrep -f flashplayer`;
+do 
+    for file in `lsof -p $pid | grep '/tmp/Flash'`;
+    do
+        echo `echo "$file" | awk 'END{print "/proc/" $2 "/fd/" $4}' | sed 's/[rwu]$//'`
+    done
+done
