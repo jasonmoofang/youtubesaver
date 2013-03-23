@@ -120,7 +120,7 @@ void MainWindow::doExportVideo() {
     QStringList exportCommand;
     exportCommand << "cp";
     exportCommand << fileNameString;
-    exportCommand << videoUrl->url().path().replace(" ", "");
+    exportCommand << videoUrl->url().path();
     KProcess::execute(exportCommand);
     KMessageBox::information(this, "Done!");
     setStatusInfo("");
@@ -128,9 +128,9 @@ void MainWindow::doExportVideo() {
 
 void MainWindow::appendFLV(const KUrl& url) {
     if (!url.path().endsWith(".flv")) {
-        videoUrl->setText(url.path().replace(" ","") + ".flv");
+        videoUrl->setText(url.path().trimmed() + ".flv");
     } else {
-        videoUrl->setText(url.path().replace(" ",""));
+        videoUrl->setText(url.path().trimmed());
     }
 }
 
